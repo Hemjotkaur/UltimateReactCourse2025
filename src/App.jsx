@@ -1,6 +1,8 @@
 import { useState } from "react";
 import "./index.css";
 import Counter from "./Components/Counter";
+import TravelList from "./Components/travelList";
+import Tip from "./Components/Tip";
 
 const messages = [
   "Learn React ⚛️",
@@ -32,6 +34,8 @@ function App() {
 
   return (
     <>
+    <Tip/>
+   <TravelList/>
     <button className="close" onClick={() => setisOpen(!isOpen)}>&times;</button>
       {isOpen && (
         <div className="steps">
@@ -60,7 +64,7 @@ function App() {
           </div>
         </div>
       )}
-    <Counter/>
+    <Counter/> 
     </>
   );
 }
